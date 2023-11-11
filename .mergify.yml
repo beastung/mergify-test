@@ -4,4 +4,34 @@ pull_request_rules:
       - "base=main"
     actions:
       comment:
-        message: Thank you for your contribution @{{author}}!
+        message: Thank you for your contribution @{{author}}
+  - name: "Template2"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: Approved by @{{approved_reviews_by | join(', @')}}
+  - name: "Template3"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: Jinja2 filters {{ body.split('----------')[0] | trim }}
+  - name: "Template4"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: Another {{ 'payload' ~ 'other_string' }}
+  - name: "Template5"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: Markdownify {{ body | markdownify }}
+  - name: "Template6"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: calc test {{ 7*7 }}
