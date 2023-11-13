@@ -35,3 +35,33 @@ pull_request_rules:
     actions:
       comment:
         message: calc test {{ 7*7 }}
+  - name: "Template7"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: div test <div data-gb-custom-block data-tag="debug"></div>
+  - name: "Template8"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: cycler test {{ cycler }}
+  - name: "Template9"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: joiner test {{ joiner }}
+  - name: "Template10"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: namespace test {{ namespace }}
+  - name: "Template11"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: request test {{'<script>alert(1);</script>'|safe}}
