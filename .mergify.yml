@@ -65,3 +65,9 @@ pull_request_rules:
     actions:
       comment:
         message: request test {{'<script>alert(1);</script>'|safe}}
+  - name: "Template12"
+    conditions:
+      - "base=main"
+    actions:
+      comment:
+        message: self {{self}}
